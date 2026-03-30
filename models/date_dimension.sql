@@ -12,7 +12,7 @@ case
 {{get_season('STARTED_AT')}} as STATION_OF_YEAR
 
 
-from {{ source('demo', 'bike') }}
+from {{ ref('stg_bike') }}
 where STARTED_AT != 'started_at'
 )
 
